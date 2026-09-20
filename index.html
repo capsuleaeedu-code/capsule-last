@@ -113,18 +113,88 @@
 
 <section class="section" id="counseling">
   <div class="container form-wrap">
-    <div><h2>Talk to a counselor, free</h2><p class="lead">Leave your details and we'll message you on WhatsApp to help you choose the right program.</p></div>
-    <form class="form-card" data-lead-form novalidate>
-  <div class="form-grid">
-    <div class="field"><label for="m-name">Full name</label><input id="m-name" name="name" autocomplete="name" required></div>
-    <div class="field"><label for="m-phone">Phone / WhatsApp number</label><input id="m-phone" name="phone" type="tel" autocomplete="tel" required></div>
-    <div class="field full"><label for="m-course">Program / course</label><select id="m-course" name="course" data-course-select required></select></div>
-    <div class="hp" aria-hidden="true"><label>Leave this empty<input name="company_website" tabindex="-1" autocomplete="off"></label></div>
+    <div>
+      <h2>Talk to a counselor, free</h2>
+      <p class="lead">Leave your details and we will contact you to help you choose the right program.</p>
+    </div>
+    
+    <form class="form-card" id="leadForm" data-lead-form novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="m-name">Full name</label>
+          <input id="m-name" name="name" autocomplete="name" required>
+        </div>
+        
+        <div class="field">
+          <label for="m-phone">Phone / WhatsApp number</label>
+          <input id="m-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        
+        <div class="field full">
+          <label for="m-course">Program / course</label>
+          <select id="m-course" name="course" data-course-select required>
+            <option value="">Select a program</option>
+            <!-- Add your course options here -->
+          </select>
+        </div>
+        
+        <!-- Honeypot anti-spam field -->
+        <div class="hp" aria-hidden="true" style="display:none;">
+          <label>Leave this empty<input name="company_website" tabindex="-1" autocomplete="off"></label>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-submit" style="margin-top: 20px;">
+        <button type="submit" class="btn-primary" id="submitBtn">Submit Details</button>
+      </div>
+      
+      <p id="form-message" style="margin-top: 10px; font-weight: 500;"></p>
+    </form>
   </div>
-  <div class="form-actions"><button class="btn btn-orange" type="submit">Get free counseling</button><a class="btn btn-line" href="admission.html">Full enquiry form</a></div>
-  <p class="form-status" role="status" aria-live="polite"></p>
-</form>
-  </div>
+</section>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwdREwDguwL7AOSa45iThw-_9MdZ88qfQzLYObXBwteCF26JjsJ449Lvx2iCBQWYwum/exec';
+const form = document.getElementById('leadForm');
+const submitBtn = document.getElementById('submitBtn');
+const formMessage = document.getElementById('form-message');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  // Check honeypot (anti-spam)
+  if (form.company_website.value !== '') {
+    return; // Bot detected, silently stop
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+  formMessage.textContent = '';
+
+  const formData = new FormData(form);
+
+  fetch(SCRIPT_URL, { 
+    method: 'POST', 
+    body: formData 
+  })
+  .then(response => {
+    formMessage.style.color = 'green';
+    formMessage.textContent = 'Thank you! Your details have been submitted successfully.';
+    form.reset();
+  })
+  .catch(error => {
+    console.error('Error!', error.message);
+    formMessage.style.color = 'red';
+    formMessage.textContent = 'Something went wrong. Please try again.';
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Details';
+  });
+});
+</>
+
 </section>
 
 </main>
