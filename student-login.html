@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Capsule Educational Institute Student Portal">
+  <title>Student Login | Capsule Educational Institute</title>
+
+  <style>
+    :root {
+      --navy: #0b1220;
+      --navy-2: #111b2e;
+      --orange: #ff6b35;
+      --white: #ffffff;
+      --muted: #9aa6b8;
+      --border: rgba(255,255,255,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,107,53,.12), transparent 35%),
+        var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .brand-mark {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--orange), #ff8b62);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      font-weight: 800;
+      box-shadow: 0 12px 35px rgba(255,107,53,.22);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    .brand p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card {
+      background: rgba(17,27,46,.94);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 30px 25px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.35);
+    }
+
+    .card h2 {
+      margin: 0 0 7px;
+      font-size: 22px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 24px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      margin: 0 0 8px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 15px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: white;
+      outline: none;
+      font-size: 15px;
+    }
+
+    input:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255,107,53,.12);
+    }
+
+    input::placeholder {
+      color: #718096;
+    }
+
+    .login-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 11px;
+      padding: 15px;
+      background: var(--orange);
+      color: white;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+    }
+
+    .message {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .message.error {
+      display: block;
+      background: rgba(220,38,38,.12);
+      border: 1px solid rgba(220,38,38,.3);
+      color: #ffb4b4;
+    }
+
+    .help {
+      text-align: center;
+      margin-top: 21px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .help a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #b8c2d1;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    .security-note {
+      margin-top: 18px;
+      padding: 12px 13px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.035);
+      color: #8e9aac;
+      font-size: 11px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 16px; }
+      .card { padding: 25px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <h1>Capsule Educational Institute</h1>
+      <p>Student Portal</p>
+    </div>
+
+    <section class="card">
+      <h2>Student Login</h2>
+      <p class="subtitle">
+        Login using the Student ID and password provided by Capsule Educational Institute.
+      </p>
+
+      <form id="loginForm" autocomplete="on">
+        <div class="field">
+          <label for="studentId">Student ID / Username</label>
+          <input
+            id="studentId"
+            name="studentId"
+            type="text"
+            placeholder="Enter your Student ID"
+            autocomplete="username"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <button class="login-btn" type="submit">Login to Student Portal</button>
+
+        <div id="message" class="message"></div>
+      </form>
+
+      <div class="help">
+        Don't have your login details?<br>
+        Contact <a href="https://wa.me/971542474416" target="_blank" rel="noopener">Capsule Academic Support</a>.
+      </div>
+
+      <div class="security-note">
+        Your login credentials will be connected to a secure authentication system.
+        Do not share your password with anyone.
+      </div>
+    </section>
+
+    <a class="back" href="index.html">← Back to Capsule Educational Institute</a>
+
+  </main>
+
+  <script>
+    /*
+      SECURITY NOTE:
+      Do NOT put real student usernames or passwords in this file.
+      This page is the login interface only.
+
+      The authentication will be connected to a secure backend/database
+      in the next step.
+    */
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const message = document.getElementById("message");
+      message.className = "message error";
+      message.textContent =
+        "Student authentication is being connected. Please use the secure login system once it is activated.";
+    });
+  </script>
+</body>
+</html>
