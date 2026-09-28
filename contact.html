@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact and enquiries | Capsule Educational Institute</title>
+<meta name="description" content="Talk to our admissions team in Abu Dhabi. Call or WhatsApp +971 54 247 4416, or send an enquiry and we will contact you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7FB; --surface:#FFFFFF; --ink:#0D2444; --muted:#4A5B76; --line:#D9E0EC;
+  --blue:#3B5CA1; --blue-text:#2F4C8F; --orange:#FD6708; --orange-hover:#FF8433;
+  --hero:#0D2444; --footer:#081A33; --logo-blue:#3B5CA1; --focus:#2F4C8F;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#08152B; --surface:#0E2040; --ink:#EAF0FA; --muted:#A9B8D1; --line:#23375C;
+    --blue:#4A6DB8; --blue-text:#9DB6E8; --hero:#0B1D3A; --footer:#061224; --logo-blue:#FFFFFF; --focus:#9DB6E8;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08152B; --surface:#0E2040; --ink:#EAF0FA; --muted:#A9B8D1; --line:#23375C;
+  --blue:#4A6DB8; --blue-text:#9DB6E8; --hero:#0B1D3A; --footer:#061224; --logo-blue:#FFFFFF; --focus:#9DB6E8;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (min-width:861px){html{scroll-padding-top:88px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+svg,img{max-width:100%}
+a{color:var(--blue-text)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--orange);color:#0D2444;padding:10px 16px;border-radius:8px;font-weight:600;z-index:100}
+.skip:focus{top:12px}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+.site-header{background:var(--bg);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;min-height:72px;padding-block:10px}
+.brand{display:block;color:var(--logo-blue);line-height:0}
+.brand svg{height:44px;width:auto;display:block}
+.main-nav{min-width:0}
+.nav{display:flex;gap:26px;list-style:none;margin:0;padding:0;overflow-x:auto}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap;padding:6px 0;display:inline-block}
+.nav a:hover{color:var(--blue-text);text-decoration:underline;text-underline-offset:6px}
+.header-cta.btn{display:none}
+@media (min-width:861px){
+  .site-header{position:sticky;top:0;z-index:50}
+  .header-cta.btn{display:inline-flex}
+}
+@media (max-width:860px){
+  .site-header .wrap{padding-block:12px}
+  .main-nav{order:3;width:100%;border-top:1px solid var(--line);padding-top:6px}
+  .nav{gap:22px}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font:600 .98rem/1 var(--font);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--orange);color:#0D2444}
+.btn-primary:hover{background:var(--orange-hover)}
+.btn-ghost{border-color:currentColor;color:var(--ink)}
+.btn-ghost:hover{background:rgba(127,150,190,.16)}
+.btn-ink{background:var(--ink);color:var(--bg)}
+.btn-sm{min-height:40px;padding:0 16px;font-size:.9rem}
+.on-navy .btn-ghost{color:#fff}
+.on-navy .btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+/* hero */
+.hero{background:var(--hero);color:#fff;padding:72px 0 132px;clip-path:polygon(0 0,100% 0,100% calc(100% - 56px),0 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.1;letter-spacing:-.02em;font-weight:700;margin:0 0 20px}
+.lead{font-size:1.1rem;color:#D3DDF0;max-width:52ch;margin:0 0 32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:10px;color:#C4D1EA;font-size:.95rem}
+.hero-facts li{display:flex;gap:10px;align-items:center}
+.hero-facts .ico{color:var(--orange);width:18px;height:18px;stroke-width:2.6}
+
+.tickets{display:grid;gap:20px}
+.ticket{position:relative;display:grid;grid-template-columns:1fr auto;background:#fff;color:#0D2444;border-radius:14px}
+.ticket::before{content:"";position:absolute;inset:0 auto 0 0;width:8px;background:var(--orange);border-radius:14px 0 0 14px}
+.ticket-main{padding:24px 24px 24px 34px}
+.ticket-title{margin:0;font-size:1.35rem;font-weight:600;line-height:1.3}
+.ticket-sub{margin:2px 0 18px;color:#4A5B76;font-size:.95rem}
+.ticket-meta{display:grid;grid-template-columns:repeat(2,auto);gap:14px 32px;margin:0;justify-content:start}
+.ticket-meta dt{font-size:.78rem;color:#5A6B88;line-height:1.3}
+.ticket-meta dd{margin:2px 0 0;font-weight:600;font-size:.92rem;line-height:1.35;white-space:nowrap}
+.ticket-stub{position:relative;border-left:2px dashed #C3CDE2;padding:24px 28px;min-width:178px;display:flex;flex-direction:column;justify-content:center}
+.ticket-stub::before,.ticket-stub::after{content:"";position:absolute;left:-13px;width:24px;height:24px;border-radius:50%;background:var(--hero)}
+.ticket-stub::before{top:-12px}
+.ticket-stub::after{bottom:-12px}
+.stub-label{font-size:.78rem;color:#5A6B88;line-height:1.3}
+.stub-price{font-size:2.1rem;font-weight:700;line-height:1.15;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stub-price small{font-size:.95rem;font-weight:600;margin-right:6px;letter-spacing:0}
+.stub-vat{font-size:.85rem;color:#4A5B76}
+
+/* sections */
+.section{padding:88px 0}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.section-head{max-width:66ch;margin-bottom:44px}
+h2{font-size:clamp(1.7rem,3.2vw,2.35rem);line-height:1.2;letter-spacing:-.015em;font-weight:700;margin:0 0 14px}
+h3{font-size:1.2rem;line-height:1.35;font-weight:600;margin:0 0 10px}
+.section-head p{margin:0;color:var(--muted)}
+p{margin:0 0 14px}
+.muted{color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.checks{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.checks li{position:relative;padding-left:30px}
+.checks li::before{content:"";position:absolute;left:2px;top:.5em;width:14px;height:7px;border-left:3px solid var(--orange);border-bottom:3px solid var(--orange);transform:rotate(-45deg)}
+.fineprint{font-size:.88rem;color:var(--muted);max-width:70ch;margin-top:28px}
+
+/* programmes */
+.level{display:grid;grid-template-columns:300px 1fr;gap:48px;padding:40px 0;border-top:1px solid var(--line)}
+.level:first-of-type{padding-top:8px;border-top:0}
+.level:last-of-type{padding-bottom:0}
+.fees{width:100%;border-collapse:collapse;margin-top:20px}
+.fees th,.fees td{padding:10px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400;font-size:.95rem}
+.fees td{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fees .total th,.fees .total td{font-weight:700;border-bottom:0;padding-top:14px;font-size:1rem}
+.fees .total td small{display:block;font-weight:500;font-size:.8rem;color:var(--muted)}
+.progs{width:100%;border-collapse:collapse}
+.progs th,.progs td{text-align:left;vertical-align:top;padding:18px 18px 18px 0;border-top:1px solid var(--line)}
+.progs thead th{font-size:.85rem;color:var(--muted);font-weight:500;padding-top:0;padding-bottom:10px;border-top:0}
+.progs tbody th{font-weight:600;font-size:1.05rem;width:56%}
+.progs tbody th span{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+.progs tbody tr:last-child > *{border-bottom:1px solid var(--line)}
+.chips{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:1px 11px;font-size:.8rem;font-weight:400;color:var(--muted);line-height:1.7}
+
+/* payment */
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px;list-style:none;margin:0;padding:0}
+.pay li{border-top:4px solid var(--blue);padding-top:22px}
+.pay h3{font-size:1.6rem;font-weight:700;margin-bottom:8px}
+.pay p{color:var(--muted);margin:0}
+.pay-foot{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;margin-top:40px}
+.pay-foot p{margin:0;max-width:64ch;color:var(--muted);font-size:.92rem}
+
+/* approvals */
+.facts{margin:24px 0 0;display:grid;gap:0}
+.facts div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.facts div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{color:var(--muted);font-size:.92rem}
+.facts dd{margin:0;font-weight:500}
+.recs{width:100%;border-collapse:collapse;margin-top:6px}
+.recs th,.recs td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-top:1px solid var(--line)}
+.recs tr:last-child > *{border-bottom:1px solid var(--line)}
+.recs th{width:34%;font-weight:600}
+.recs td{color:var(--muted)}
+.honours{margin-top:64px}
+.honours h3{margin-bottom:6px}
+.log{margin:14px 0 0}
+.log div{display:grid;grid-template-columns:146px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.log div:last-child{border-bottom:1px solid var(--line)}
+.log dt{font-weight:600}
+.log dd{margin:0;color:var(--muted)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;list-style:none;counter-reset:s;padding:16px 0 0;margin:0}
+.steps li{counter-increment:s;position:relative;border-top:2px solid var(--line);padding-top:30px}
+.steps li::before{content:counter(s);position:absolute;top:-17px;left:0;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:600;font-size:.95rem}
+.steps h3{font-size:1.05rem;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* contact */
+.contact{background:var(--hero);color:#fff;padding:88px 0}
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.contact h2{color:#fff}
+.contact .lead{margin-bottom:0}
+.numbers{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:14px}
+.numbers li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding:16px 18px;border:1px solid rgba(255,255,255,.24);border-radius:12px}
+.num{font-size:1.25rem;font-weight:600;font-variant-numeric:tabular-nums}
+.num-actions{display:flex;gap:10px;flex-wrap:wrap}
+.address{display:flex;gap:14px;margin-top:32px;font-style:normal;color:#D3DDF0}
+.address .ico{margin-top:4px;color:var(--orange)}
+.address strong{color:#fff;font-weight:600}
+.address a{color:#fff}
+.panel{background:#fff;color:#0D2444;border-radius:14px;padding:30px}
+.panel h3{font-size:1.3rem}
+.panel p{color:#4A5B76;font-size:.95rem}
+.field{margin-top:18px}
+.field label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.field input,.field select{width:100%;min-height:48px;padding:0 14px;border:1.5px solid #AEBBD6;border-radius:10px;font:400 1rem var(--font);color:#0D2444;background:#fff}
+.field input:focus-visible,.field select:focus-visible{outline:3px solid #2F4C8F;outline-offset:2px;border-color:#2F4C8F}
+.panel .btn{width:100%;margin-top:22px}
+.panel .note{margin:12px 0 0;font-size:.82rem}
+
+/* footer */
+.site-footer{background:var(--footer);color:#B9C7E2;padding:44px 0 48px;font-size:.9rem}
+.site-footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px 56px;align-items:start}
+.site-footer .brand{color:#fff}
+.site-footer p{margin:0 0 10px;max-width:74ch}
+.site-footer a{color:#fff}
+
+/* quick contact bar (mobile) */
+.quickbar{display:none}
+@media (max-width:860px){
+  body{padding-bottom:78px}
+  .quickbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--surface);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .hero .wrap,.two,.contact .grid,.level,.site-footer .wrap{grid-template-columns:1fr}
+  .hero .wrap{gap:44px}
+  .two{gap:40px}
+  .level{gap:8px}
+  .level .progs{margin-top:28px}
+  .honours .two{gap:44px}
+  .steps{grid-template-columns:1fr 1fr;gap:40px 32px}
+  .pay{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:700px){
+  .section{padding:64px 0}
+  .contact{padding:64px 0}
+  .hero{padding:48px 0 104px;clip-path:polygon(0 0,100% 0,100% calc(100% - 36px),0 100%)}
+  .ticket{grid-template-columns:1fr}
+  .ticket::before{inset:0 0 auto 0;width:auto;height:8px;border-radius:14px 14px 0 0}
+  .ticket-main{padding:28px 22px 22px}
+  .ticket-meta{grid-template-columns:1fr 1fr;gap:12px 20px}
+  .ticket-meta dd{white-space:normal}
+  .ticket-stub{border-left:0;border-top:2px dashed #C3CDE2;min-width:0;padding:20px 22px;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px}
+  .ticket-stub::before{left:-12px;top:-13px}
+  .ticket-stub::after{left:auto;right:-12px;top:-13px;bottom:auto}
+  .stub-label{flex-basis:100%}
+  .steps{grid-template-columns:1fr}
+  .facts div,.log div{grid-template-columns:1fr;gap:2px}
+  .progs thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .progs,.progs tbody,.progs tr,.progs th,.progs td{display:block;width:auto}
+  .progs tr{padding:18px 0;border-top:1px solid var(--line)}
+  .progs th,.progs td,.progs tbody th{border:0;padding:0;width:auto}
+  .progs td{margin-top:10px}
+  .progs td::before{content:attr(data-label);display:block;font-size:.8rem;color:var(--muted)}
+  .progs tbody tr:last-child{border-bottom:1px solid var(--line)}
+  .progs tbody tr:last-child > *{border-bottom:0}
+  .recs th{width:42%}
+  .panel{padding:24px}
+}
+
+/* AI Foundations */
+.ai-hero{display:block;max-width:760px}
+.ai-hero img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);display:block}
+.ai-tag{display:inline-block;background:var(--orange);color:#0D2444;font-weight:600;font-size:13px;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.ai-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.ai-stats div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+.ai-stats b{display:block;font-size:22px;color:var(--blue-text)}
+.ai-stats span{font-size:13px;color:var(--muted)}
+.ai-sub{margin:40px 0 16px}
+.ai-sessions{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.ai-sessions details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.ai-sessions summary{cursor:pointer;font-weight:600;list-style:none}
+.ai-sessions summary::-webkit-details-marker{display:none}
+.ai-sessions summary b{color:var(--orange);margin-right:10px}
+.ai-sessions p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.ai-packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ai-pack{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;position:relative}
+.ai-pack.rec{border:2px solid var(--orange)}
+.ai-rec{position:absolute;top:-12px;left:24px;background:var(--orange);color:#0D2444;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px}
+.ai-pack h4{margin:4px 0 0;font-size:20px}
+.ai-pack .ai-price{font-size:30px;font-weight:700;color:var(--blue-text);margin:8px 0}
+.ai-pack ul{padding-left:18px;margin:12px 0 20px;font-size:15px;flex:1}
+.ai-pack .btn{justify-content:center}
+@media (max-width:860px){.ai-hero,.ai-packs,.ai-sessions{grid-template-columns:1fr}.ai-stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="capsule-logo" viewBox="75 345 446 102"><path fill="currentColor" d="M 110.96 348.96 C 119.10 348.96 126.08 351.12 131.87 355.41 C 137.67 359.71 141.55 365.58 143.50 373.01 L 125.13 373.01 C 123.76 370.14 121.83 367.96 119.32 366.46 C 116.81 364.96 113.96 364.21 110.76 364.21 C 105.62 364.21 101.45 366.00 98.26 369.58 C 95.07 373.17 93.47 377.96 93.47 383.95 C 93.47 389.94 95.07 394.73 98.26 398.32 C 101.45 401.90 105.62 403.69 110.76 403.69 C 113.96 403.69 116.81 402.94 119.32 401.44 C 121.83 399.94 123.76 397.76 125.13 394.90 L 143.50 394.90 C 141.55 402.32 137.67 408.17 131.87 412.44 C 126.08 416.71 119.10 418.84 110.96 418.84 C 104.32 418.84 98.37 417.36 93.13 414.39 C 87.88 411.43 83.79 407.31 80.86 402.03 C 77.93 396.75 76.46 390.73 76.46 383.95 C 76.46 377.17 77.93 371.13 80.86 365.82 C 83.79 360.51 87.88 356.38 93.13 353.41 C 98.37 350.45 104.32 348.96 110.96 348.96"/><path fill="currentColor" d="M 249.96 365.33 L 262.01 365.33 C 276.66 365.33 288.52 377.20 288.52 391.84 C 288.52 406.48 276.66 418.35 262.01 418.35 L 249.96 418.35 C 235.32 418.35 223.45 406.48 223.45 391.84 C 223.45 377.20 235.32 365.33 249.96 365.33"/><path fill="currentColor" d="M 223.45 365.33 L 245.14 365.33 L 245.14 431.60 C 245.14 438.83 241.53 442.45 234.30 442.45 C 227.07 442.45 223.45 438.83 223.45 431.60 Z M 223.45 365.33"/><path fill="currentColor" d="M 300.57 400.47 L 317.08 400.47 C 317.28 402.35 318.16 403.89 319.72 405.06 C 321.28 406.23 323.21 406.82 325.49 406.82 C 327.57 406.82 329.18 406.41 330.32 405.60 C 331.46 404.78 332.03 403.72 332.03 402.42 C 332.03 400.86 331.22 399.70 329.59 398.95 C 327.96 398.20 325.32 397.37 321.67 396.46 C 317.77 395.55 314.51 394.58 311.90 393.58 C 309.30 392.57 307.05 390.97 305.16 388.79 C 303.27 386.60 302.33 383.66 302.33 379.94 C 302.33 376.82 303.19 373.97 304.92 371.39 C 306.64 368.82 309.18 366.78 312.54 365.28 C 315.89 363.79 319.89 363.04 324.51 363.04 C 331.35 363.04 336.74 364.73 340.68 368.12 C 344.62 371.51 346.89 376.00 347.48 381.60 L 332.03 381.60 C 331.77 379.72 330.94 378.22 329.54 377.11 C 328.14 376.00 326.30 375.45 324.02 375.45 C 322.07 375.45 320.57 375.82 319.53 376.57 C 318.48 377.32 317.96 378.35 317.96 379.65 C 317.96 381.21 318.79 382.39 320.45 383.17 C 322.12 383.95 324.71 384.73 328.22 385.51 C 332.26 386.56 335.55 387.58 338.09 388.59 C 340.64 389.60 342.87 391.23 344.79 393.48 C 346.71 395.73 347.70 398.74 347.77 402.52 C 347.77 405.71 346.87 408.56 345.08 411.07 C 343.29 413.58 340.72 415.55 337.36 416.98 C 334.01 418.42 330.11 419.13 325.68 419.13 C 320.92 419.13 316.69 418.32 312.98 416.69 C 309.26 415.06 306.33 412.83 304.18 410 C 302.03 407.16 300.83 403.98 300.57 400.47"/><path fill="currentColor" d="M 411.88 363.82 L 411.88 418.35 L 395.17 418.35 L 395.17 410.92 C 393.47 413.33 391.17 415.27 388.28 416.74 C 385.38 418.20 382.17 418.94 378.65 418.94 C 374.48 418.94 370.80 418.01 367.60 416.15 C 364.41 414.30 361.94 411.61 360.18 408.09 C 358.42 404.57 357.54 400.43 357.54 395.68 L 357.54 363.82 L 374.16 363.82 L 374.16 393.43 C 374.16 397.08 375.10 399.91 376.99 401.93 C 378.88 403.95 381.42 404.96 384.61 404.96 C 387.87 404.96 390.44 403.95 392.33 401.93 C 394.22 399.91 395.17 397.08 395.17 393.43 L 395.17 363.82 Z M 411.88 363.82"/><path fill="currentColor" d="M 423.90 418.35 L 440.61 418.35 L 440.61 346.03 L 423.90 346.03 Z M 423.90 418.35"/><path fill="currentColor" d="M 503.83 395.09 L 466.01 395.09 C 466.28 398.48 467.37 401.07 469.29 402.86 C 471.21 404.65 473.57 405.55 476.37 405.55 C 480.55 405.55 483.44 403.79 485.07 400.27 L 502.86 400.27 C 501.95 403.85 500.30 407.08 497.92 409.94 C 495.55 412.81 492.57 415.06 488.98 416.69 C 485.40 418.32 481.39 419.13 476.96 419.13 C 471.62 419.13 466.86 417.99 462.69 415.71 C 458.52 413.43 455.27 410.17 452.92 405.94 C 450.58 401.71 449.40 396.75 449.40 391.08 C 449.40 385.42 450.56 380.46 452.87 376.23 C 455.19 372 458.42 368.74 462.60 366.46 C 466.76 364.18 471.55 363.04 476.96 363.04 C 482.24 363.04 486.93 364.14 491.03 366.36 C 495.14 368.58 498.35 371.74 500.66 375.84 C 502.97 379.94 504.13 384.73 504.13 390.21 C 504.13 391.77 504.03 393.40 503.83 395.09 M 487.03 385.81 C 487.03 382.94 486.05 380.66 484.10 378.97 C 482.14 377.27 479.70 376.42 476.76 376.42 C 473.96 376.42 471.60 377.24 469.68 378.87 C 467.76 380.50 466.57 382.81 466.11 385.81 Z M 487.03 385.81"/><path fill="#FD6708" d="M 250.78 431.51 L 250.78 435.17 L 256.68 435.17 L 256.68 438.57 L 250.78 438.57 L 250.78 442.54 L 257.45 442.54 L 257.45 446.07 L 246.38 446.07 L 246.38 427.99 L 257.45 427.99 L 257.45 431.51 Z M 250.78 431.51"/><path fill="#FD6708" d="M 265.77 431.49 C 266.71 431.49 267.57 431.69 268.35 432.08 C 269.14 432.48 269.75 433.01 270.20 433.68 L 270.20 427.01 L 274.60 427.01 L 274.60 446.07 L 270.20 446.07 L 270.20 444.01 C 269.78 444.69 269.20 445.24 268.43 445.65 C 267.67 446.07 266.78 446.27 265.77 446.27 C 264.58 446.27 263.51 445.97 262.55 445.36 C 261.59 444.75 260.83 443.88 260.27 442.76 C 259.71 441.63 259.43 440.33 259.43 438.85 C 259.43 437.38 259.71 436.08 260.27 434.97 C 260.83 433.85 261.59 432.99 262.55 432.39 C 263.51 431.79 264.58 431.49 265.77 431.49 M 267.05 435.33 C 266.18 435.33 265.44 435.64 264.83 436.27 C 264.22 436.89 263.91 437.76 263.91 438.85 C 263.91 439.96 264.22 440.82 264.83 441.47 C 265.44 442.11 266.18 442.43 267.05 442.43 C 267.93 442.43 268.67 442.12 269.28 441.48 C 269.89 440.85 270.20 439.98 270.20 438.88 C 270.20 437.78 269.89 436.92 269.28 436.28 C 268.67 435.64 267.93 435.33 267.05 435.33"/><path fill="#FD6708" d="M 291.98 431.69 L 291.98 446.07 L 287.58 446.07 L 287.58 444.11 C 287.13 444.74 286.53 445.25 285.76 445.64 C 285.00 446.03 284.16 446.22 283.23 446.22 C 282.13 446.22 281.16 445.98 280.32 445.49 C 279.48 445 278.82 444.29 278.36 443.36 C 277.90 442.43 277.66 441.34 277.66 440.09 L 277.66 431.69 L 282.04 431.69 L 282.04 439.50 C 282.04 440.46 282.29 441.21 282.79 441.74 C 283.29 442.27 283.96 442.54 284.80 442.54 C 285.66 442.54 286.33 442.27 286.83 441.74 C 287.33 441.21 287.58 440.46 287.58 439.50 L 287.58 431.69 Z M 291.98 431.69"/><path fill="#FD6708" d="M 301.48 431.49 C 303.29 431.49 304.79 431.96 306.00 432.91 C 307.21 433.85 308.01 435.18 308.39 436.90 L 303.70 436.90 C 303.30 435.80 302.54 435.25 301.41 435.25 C 300.60 435.25 299.96 435.56 299.48 436.19 C 299 436.82 298.75 437.71 298.75 438.88 C 298.75 440.05 299 440.94 299.48 441.57 C 299.96 442.20 300.60 442.51 301.41 442.51 C 302.54 442.51 303.30 441.96 303.70 440.86 L 308.39 440.86 C 308.01 442.55 307.21 443.87 305.99 444.83 C 304.77 445.79 303.27 446.27 301.48 446.27 C 300.08 446.27 298.83 445.97 297.74 445.37 C 296.65 444.77 295.80 443.91 295.19 442.80 C 294.58 441.68 294.28 440.37 294.28 438.88 C 294.28 437.39 294.58 436.08 295.19 434.97 C 295.80 433.85 296.65 432.99 297.74 432.39 C 298.83 431.79 300.08 431.49 301.48 431.49"/><path fill="#FD6708" d="M 316.19 431.49 C 317.20 431.49 318.09 431.69 318.85 432.11 C 319.62 432.52 320.21 433.06 320.62 433.73 L 320.62 431.69 L 325.02 431.69 L 325.02 446.07 L 320.62 446.07 L 320.62 444.03 C 320.19 444.70 319.59 445.24 318.83 445.65 C 318.06 446.07 317.17 446.27 316.16 446.27 C 315 446.27 313.93 445.97 312.97 445.36 C 312.01 444.75 311.25 443.88 310.69 442.76 C 310.13 441.63 309.85 440.33 309.85 438.85 C 309.85 437.38 310.13 436.08 310.69 434.97 C 311.25 433.85 312.01 432.99 312.97 432.39 C 313.93 431.79 315.00 431.49 316.19 431.49 M 317.48 435.33 C 316.60 435.33 315.86 435.64 315.25 436.27 C 314.64 436.89 314.33 437.76 314.33 438.85 C 314.33 439.96 314.64 440.82 315.25 441.47 C 315.86 442.11 316.60 442.43 317.48 442.43 C 318.35 442.43 319.09 442.12 319.70 441.48 C 320.31 440.85 320.62 439.98 320.62 438.88 C 320.62 437.78 320.31 436.92 319.70 436.28 C 319.09 435.64 318.35 435.33 317.48 435.33"/><path fill="#FD6708" d="M 336.22 442.33 L 336.22 446.07 L 333.98 446.07 C 332.39 446.07 331.14 445.67 330.25 444.89 C 329.35 444.11 328.91 442.84 328.91 441.07 L 328.91 435.35 L 327.16 435.35 L 327.16 431.70 L 328.91 431.70 L 328.91 428.19 L 333.31 428.19 L 333.31 431.70 L 336.20 431.70 L 336.20 435.35 L 333.31 435.35 L 333.31 441.12 C 333.31 441.55 333.42 441.86 333.62 442.05 C 333.83 442.24 334.17 442.33 334.65 442.33 Z M 336.22 442.33"/><path fill="#FD6708" d="M 338.26 427.83 C 338.26 427.15 338.50 426.58 338.99 426.12 C 339.48 425.67 340.11 425.44 340.88 425.44 C 341.64 425.44 342.26 425.67 342.75 426.12 C 343.24 426.58 343.48 427.15 343.48 427.83 C 343.48 428.50 343.24 429.07 342.75 429.52 C 342.26 429.98 341.64 430.20 340.88 430.20 C 340.11 430.20 339.48 429.98 338.99 429.52 C 338.50 429.07 338.26 428.50 338.26 427.83 M 343.07 446.07 L 338.67 446.07 L 338.67 431.70 L 343.07 431.70 Z M 343.07 446.07"/><path fill="#FD6708" d="M 345.39 438.88 C 345.39 437.41 345.71 436.10 346.37 434.98 C 347.02 433.85 347.91 432.99 349.05 432.39 C 350.18 431.79 351.45 431.49 352.86 431.49 C 354.26 431.49 355.53 431.79 356.67 432.39 C 357.80 432.99 358.69 433.85 359.35 434.98 C 360.00 436.10 360.33 437.41 360.33 438.88 C 360.33 440.36 360 441.66 359.33 442.78 C 358.67 443.91 357.77 444.77 356.63 445.37 C 355.49 445.97 354.21 446.27 352.81 446.27 C 351.40 446.27 350.13 445.97 349.01 445.37 C 347.88 444.77 347.00 443.91 346.35 442.80 C 345.71 441.68 345.39 440.37 345.39 438.88 M 355.84 438.88 C 355.84 437.73 355.56 436.85 354.98 436.23 C 354.41 435.61 353.70 435.30 352.86 435.30 C 352.00 435.30 351.29 435.60 350.72 436.21 C 350.16 436.82 349.87 437.71 349.87 438.88 C 349.87 440.03 350.15 440.91 350.71 441.53 C 351.26 442.15 351.96 442.46 352.81 442.46 C 353.65 442.46 354.36 442.15 354.96 441.53 C 355.55 440.91 355.84 440.03 355.84 438.88"/><path fill="#FD6708" d="M 376.96 437.67 L 376.96 446.07 L 372.58 446.07 L 372.58 438.26 C 372.58 437.30 372.33 436.55 371.83 436.02 C 371.34 435.49 370.67 435.23 369.83 435.23 C 368.99 435.23 368.32 435.49 367.82 436.02 C 367.32 436.55 367.07 437.30 367.07 438.26 L 367.07 446.07 L 362.67 446.07 L 362.67 431.70 L 367.07 431.70 L 367.07 433.60 C 367.52 432.97 368.12 432.46 368.87 432.10 C 369.63 431.73 370.48 431.54 371.42 431.54 C 373.10 431.54 374.45 432.08 375.46 433.18 C 376.46 434.27 376.96 435.76 376.96 437.67"/><path fill="#FD6708" d="M 385.48 431.49 C 386.5 431.49 387.39 431.69 388.15 432.11 C 388.91 432.52 389.50 433.06 389.91 433.73 L 389.91 431.69 L 394.32 431.69 L 394.32 446.07 L 389.91 446.07 L 389.91 444.03 C 389.48 444.70 388.89 445.24 388.12 445.65 C 387.36 446.07 386.47 446.27 385.46 446.27 C 384.29 446.27 383.23 445.97 382.26 445.36 C 381.30 444.75 380.54 443.88 379.99 442.76 C 379.43 441.63 379.15 440.33 379.15 438.85 C 379.15 437.38 379.43 436.08 379.99 434.97 C 380.54 433.85 381.30 432.99 382.26 432.39 C 383.23 431.79 384.30 431.49 385.48 431.49 M 386.77 435.33 C 385.90 435.33 385.16 435.64 384.54 436.27 C 383.94 436.89 383.63 437.76 383.63 438.85 C 383.63 439.96 383.94 440.82 384.54 441.47 C 385.16 442.11 385.90 442.43 386.77 442.43 C 387.65 442.43 388.39 442.12 389.00 441.48 C 389.61 440.85 389.91 439.98 389.91 438.88 C 389.91 437.78 389.61 436.92 389.00 436.28 C 388.39 435.64 387.65 435.33 386.77 435.33"/><path fill="#FD6708" d="M 397.51 446.07 L 401.91 446.07 L 401.91 427.01 L 397.51 427.01 Z M 397.51 446.07"/><path fill="#FD6708" d="M 410.57 446.07 L 414.97 446.07 L 414.97 427.99 L 410.57 427.99 Z M 410.57 446.07"/><path fill="#FD6708" d="M 432.45 437.67 L 432.45 446.07 L 428.08 446.07 L 428.08 438.26 C 428.08 437.30 427.83 436.55 427.33 436.02 C 426.83 435.49 426.16 435.23 425.32 435.23 C 424.48 435.23 423.81 435.49 423.31 436.02 C 422.82 436.55 422.57 437.30 422.57 438.26 L 422.57 446.07 L 418.16 446.07 L 418.16 431.70 L 422.57 431.70 L 422.57 433.60 C 423.01 432.97 423.61 432.46 424.37 432.10 C 425.12 431.73 425.97 431.54 426.92 431.54 C 428.60 431.54 429.94 432.08 430.95 433.18 C 431.95 434.27 432.45 435.76 432.45 437.67"/><path fill="#FD6708" d="M 434.75 441.35 L 439.10 441.35 C 439.15 441.85 439.38 442.25 439.79 442.56 C 440.21 442.87 440.71 443.03 441.31 443.03 C 441.86 443.03 442.28 442.92 442.58 442.71 C 442.89 442.49 443.04 442.21 443.04 441.87 C 443.04 441.46 442.82 441.15 442.39 440.95 C 441.96 440.76 441.27 440.54 440.31 440.30 C 439.28 440.06 438.42 439.80 437.73 439.54 C 437.05 439.27 436.45 438.85 435.96 438.28 C 435.46 437.70 435.21 436.92 435.21 435.94 C 435.21 435.12 435.44 434.37 435.89 433.69 C 436.35 433.01 437.01 432.48 437.90 432.08 C 438.78 431.69 439.83 431.49 441.05 431.49 C 442.86 431.49 444.28 431.94 445.32 432.83 C 446.35 433.72 446.95 434.91 447.10 436.38 L 443.04 436.38 C 442.97 435.89 442.75 435.49 442.38 435.20 C 442.01 434.91 441.53 434.76 440.92 434.76 C 440.41 434.76 440.01 434.86 439.74 435.06 C 439.47 435.25 439.33 435.53 439.33 435.87 C 439.33 436.28 439.55 436.59 439.98 436.80 C 440.42 437.00 441.10 437.21 442.03 437.41 C 443.10 437.69 443.96 437.96 444.63 438.23 C 445.30 438.49 445.89 438.92 446.40 439.51 C 446.91 440.10 447.17 440.90 447.18 441.89 C 447.18 442.73 446.95 443.49 446.48 444.15 C 446.00 444.81 445.32 445.33 444.44 445.71 C 443.56 446.08 442.53 446.27 441.36 446.27 C 440.11 446.27 439 446.06 438.01 445.63 C 437.04 445.20 436.26 444.61 435.70 443.86 C 435.13 443.12 434.82 442.28 434.75 441.35"/><path fill="#FD6708" d="M 457.89 442.33 L 457.89 446.07 L 455.66 446.07 C 454.06 446.07 452.82 445.67 451.92 444.89 C 451.03 444.11 450.58 442.84 450.58 441.07 L 450.58 435.35 L 448.83 435.35 L 448.83 431.70 L 450.58 431.70 L 450.58 428.19 L 454.98 428.19 L 454.98 431.70 L 457.87 431.70 L 457.87 435.35 L 454.98 435.35 L 454.98 441.12 C 454.98 441.55 455.09 441.86 455.30 442.05 C 455.50 442.24 455.84 442.33 456.32 442.33 Z M 457.89 442.33"/><path fill="#FD6708" d="M 459.93 427.83 C 459.93 427.15 460.17 426.58 460.66 426.12 C 461.15 425.67 461.78 425.44 462.56 425.44 C 463.31 425.44 463.93 425.67 464.42 426.12 C 464.91 426.58 465.16 427.15 465.16 427.83 C 465.16 428.50 464.91 429.07 464.42 429.52 C 463.93 429.98 463.31 430.20 462.56 430.20 C 461.78 430.20 461.15 429.98 460.66 429.52 C 460.17 429.07 459.93 428.50 459.93 427.83 M 464.75 446.07 L 460.34 446.07 L 460.34 431.70 L 464.75 431.70 Z M 464.75 446.07"/><path fill="#FD6708" d="M 475.95 442.33 L 475.95 446.07 L 473.71 446.07 C 472.11 446.07 470.87 445.67 469.97 444.89 C 469.08 444.11 468.63 442.84 468.63 441.07 L 468.63 435.35 L 466.88 435.35 L 466.88 431.70 L 468.63 431.70 L 468.63 428.19 L 473.04 428.19 L 473.04 431.70 L 475.92 431.70 L 475.92 435.35 L 473.04 435.35 L 473.04 441.12 C 473.04 441.55 473.14 441.86 473.35 442.05 C 473.55 442.24 473.90 442.33 474.37 442.33 Z M 475.95 442.33"/><path fill="#FD6708" d="M 492.58 431.69 L 492.58 446.07 L 488.18 446.07 L 488.18 444.11 C 487.73 444.74 487.13 445.25 486.36 445.64 C 485.60 446.03 484.75 446.22 483.83 446.22 C 482.73 446.22 481.76 445.98 480.92 445.49 C 480.08 445 479.42 444.29 478.96 443.36 C 478.5 442.43 478.26 441.34 478.26 440.09 L 478.26 431.69 L 482.64 431.69 L 482.64 439.50 C 482.64 440.46 482.89 441.21 483.39 441.74 C 483.89 442.27 484.55 442.54 485.40 442.54 C 486.26 442.54 486.93 442.27 487.43 441.74 C 487.93 441.21 488.18 440.46 488.18 439.50 L 488.18 431.69 Z M 492.58 431.69"/><path fill="#FD6708" d="M 503.76 442.33 L 503.76 446.07 L 501.52 446.07 C 499.92 446.07 498.67 445.67 497.78 444.89 C 496.89 444.11 496.44 442.84 496.44 441.07 L 496.44 435.35 L 494.69 435.35 L 494.69 431.70 L 496.44 431.70 L 496.44 428.19 L 500.85 428.19 L 500.85 431.70 L 503.73 431.70 L 503.73 435.35 L 500.85 435.35 L 500.85 441.12 C 500.85 441.55 500.95 441.86 501.16 442.05 C 501.36 442.24 501.71 442.33 502.19 442.33 Z M 503.76 442.33"/><path fill="#FD6708" d="M 519.67 439.94 L 509.71 439.94 C 509.78 440.83 510.06 441.51 510.57 441.98 C 511.08 442.46 511.70 442.69 512.44 442.69 C 513.53 442.69 514.30 442.23 514.73 441.30 L 519.41 441.30 C 519.17 442.25 518.74 443.10 518.11 443.85 C 517.49 444.60 516.70 445.20 515.76 445.63 C 514.81 446.06 513.76 446.27 512.59 446.27 C 511.18 446.27 509.93 445.97 508.83 445.37 C 507.73 444.77 506.87 443.91 506.26 442.80 C 505.64 441.68 505.33 440.37 505.33 438.88 C 505.33 437.39 505.63 436.08 506.24 434.97 C 506.85 433.85 507.71 432.99 508.80 432.39 C 509.91 431.79 511.17 431.49 512.59 431.49 C 513.98 431.49 515.22 431.78 516.30 432.37 C 517.38 432.95 518.23 433.78 518.83 434.86 C 519.44 435.94 519.75 437.21 519.75 438.65 C 519.75 439.06 519.72 439.49 519.67 439.94 M 515.24 437.49 C 515.24 436.73 514.98 436.13 514.47 435.69 C 513.96 435.24 513.31 435.02 512.54 435.02 C 511.80 435.02 511.18 435.23 510.67 435.66 C 510.17 436.09 509.85 436.70 509.73 437.49 Z M 515.24 437.49"/><path fill="#FD6708" d="M 215.54 363.93 L 175.60 363.93 C 169.29 363.93 159.12 369.89 154.89 374.57 C 145.28 385.20 143.84 399.75 151.16 412.03 C 164.45 434.33 191.84 426.33 213.50 427.85 C 215.87 428.01 216.00 425.26 216.16 423.41 C 217.63 405.37 214.98 385.40 216.16 367.16 Z M 215.54 363.93"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Capsule Educational Institute, home">
+      <svg viewBox="0 0 446 102" role="img" aria-label="Capsule Educational Institute"><use href="#capsule-logo"/></svg>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Programmes and fees</a></li>
+        <li><a href="ai-foundations.html">AI course</a></li>
+        <li><a href="index.html#payment">Payment options</a></li>
+        <li><a href="index.html#approvals">Approvals</a></li>
+        <li><a href="index.html#admission">How to apply</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20your%20Bachelor%27s%20and%20Master%27s%20programmes." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp us</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="contact on-navy" id="contact">
+    <div class="wrap grid">
+      <div>
+        <h2>Talk to our admissions team</h2>
+        <p class="lead">Call or message us on WhatsApp for admission, eligibility, fees and payment plans. We will reply with the programmes that fit your qualifications.</p>
+
+        <ul class="numbers">
+          <li>
+            <span class="num">+971 54 247 4416</span>
+            <span class="num-actions">
+              <a class="btn btn-primary btn-sm" href="https://wa.me/971542474416" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+              <a class="btn btn-ghost btn-sm" href="tel:+971542474416"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+            </span>
+          </li>
+          <li>
+            <span class="num">+971 50 276 8411</span>
+            <span class="num-actions">
+              <a class="btn btn-primary btn-sm" href="https://wa.me/971502768411" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+              <a class="btn btn-ghost btn-sm" href="tel:+971502768411"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+            </span>
+          </li>
+        </ul>
+
+        <address class="address">
+          <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+          <span>
+            <strong>Capsule Educational Institute</strong><br>
+            ADCP Business Tower C, 1003, Electra Street,<br>
+            behind Al-Futtaim Honda Showroom,<br>
+            Al Danah, Zone 1, Abu Dhabi, UAE<br>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=ADCP%20Business%20Tower%20C%20Electra%20Street%20Al%20Danah%20Abu%20Dhabi" target="_blank" rel="noopener">Open in Google Maps</a>
+          </span>
+        </address>
+      </div>
+
+      <div class="panel">
+        <h3>Send an enquiry</h3>
+        <p>Fill in your details and our admissions team will contact you.</p>
+        <form id="lead-form" novalidate>
+          <div class="field"><label for="lf-name">Full name *</label><input id="lf-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Full name"></div>
+          <div class="field"><label for="lf-phone">Phone / WhatsApp number *</label><input id="lf-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="+971 5X XXX XXXX"></div>
+          <div class="field"><label for="lf-age">Age *</label><input id="lf-age" name="age" type="number" min="15" max="80" required placeholder="Age"></div>
+          <div class="field"><label for="lf-nat">Nationality *</label>
+            <select id="lf-nat" name="nationality" required>
+              <option value="">Choose your nationality</option>
+              <option>Indian</option>
+              <option>Emirati</option>
+              <option>Pakistani</option>
+              <option>Bangladeshi</option>
+              <option>Nepali</option>
+              <option>Sri Lankan</option>
+              <option>Filipino</option>
+              <option>Egyptian</option>
+              <option>Jordanian</option>
+              <option>Lebanese</option>
+              <option>Syrian</option>
+              <option>Yemeni</option>
+              <option>Sudanese</option>
+              <option>Moroccan</option>
+              <option>Nigerian</option>
+              <option>Kenyan</option>
+              <option>South African</option>
+              <option>British</option>
+              <option>American</option>
+              <option value="Other">Other (please type)</option>
+            </select>
+          </div>
+          <div class="field" id="lf-nat-other-field" hidden><label for="lf-nat-other">Please type your nationality *</label><input id="lf-nat-other" name="nationality_other" type="text" maxlength="60" placeholder="Your nationality"></div>
+          <div class="field"><label for="lf-email">Email *</label><input id="lf-email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="you@example.com"></div>
+          <div class="field"><label for="lf-course">Which course? *</label>
+            <select id="lf-course" name="course" required>
+              <option value="">Choose a course</option>
+              <optgroup label="Bachelor’s degree">
+                <option>BA – Bachelor of Arts, General</option>
+                <option>BBA – Bachelor of Business Administration, General</option>
+                <option>B.Com – Bachelor of Commerce</option>
+                <option>BCA – Bachelor of Computer Application</option>
+              </optgroup>
+              <optgroup label="Master’s degree">
+                <option>MSc – Master of Science</option>
+                <option>MA – Master of Arts</option>
+                <option>MSW – Master of Social Work</option>
+                <option>M.Com – Master of Commerce</option>
+                <option>MBA – Master of Business Administration</option>
+              </optgroup>
+              <optgroup label="AI Foundations course">
+                <option>AI Foundations – Package A (AED 499)</option>
+                <option>AI Foundations – Package B (AED 950)</option>
+                <option>AI Foundations – Package C (AED 1,260)</option>
+              </optgroup>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <p id="lf-msg" class="note" role="status" aria-live="polite"></p>
+          <button id="lf-submit" type="submit" class="btn btn-primary" style="margin-top:16px;border:0;cursor:pointer">Submit</button>
+        </form>
+        <p class="note">Prefer a call? Use either number on this page.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Capsule Educational Institute, home">
+      <svg viewBox="0 0 446 102" role="img" aria-label="Capsule Educational Institute" style="height:40px"><use href="#capsule-logo"/></svg>
+    </a>
+    <div>
+      <p>Capsule Educational Institute is an educational consultancy in Abu Dhabi, UAE. Degrees are awarded by Rabindranath Tagore University, India. Fees are in AED and exclude VAT.</p>
+      <p>Admissions: <a href="tel:+971542474416">+971 54 247 4416</a> and <a href="tel:+971502768411">+971 50 276 8411</a> (call or WhatsApp).</p>
+      <p>&copy; 2026 Capsule Educational Institute. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="quickbar">
+  <a class="btn btn-primary" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20your%20Bachelor%27s%20and%20Master%27s%20programmes." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+  <a class="btn btn-ink" href="tel:+971542474416"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
+</div>
+<script>
+// Paste your Google Apps Script web app URL here to send leads to Google Sheets.
+var SHEET_URL = "https://script.google.com/macros/s/AKfycby9-gKPX-U_Si_-iE0jc9m0vP9-qUqsprJStboFyliIFOAp0o9RCvlo9J3-Ts1y0hZg/exec";
+(function () {
+  var f = document.getElementById("lead-form"), msg = document.getElementById("lf-msg"), btn = document.getElementById("lf-submit");
+  var natSel = document.getElementById("lf-nat"), natField = document.getElementById("lf-nat-other-field");
+  natSel.addEventListener("change", function () {
+    natField.hidden = natSel.value !== "Other";
+    if (natField.hidden) document.getElementById("lf-nat-other").value = "";
+  });
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var natSel = document.getElementById("lf-nat"),
+        natOther = document.getElementById("lf-nat-other");
+    var nat = natSel.value === "Other" ? natOther.value.trim() : natSel.value;
+    var d = {
+      name: f.name.value.trim(), phone: f.phone.value.trim(), age: f.age.value.trim(),
+      email: f.email.value.trim(), course: f.course.value, nationality: nat
+    };
+    if (!d.name || !d.course || !nat || !/^[+\d][\d\s-]{6,19}$/.test(d.phone) || !(+d.age >= 15 && +d.age <= 80) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
+      msg.textContent = "Please fill in all fields correctly."; return;
+    }
+    btn.disabled = true; msg.textContent = "Sending…";
+    var done = function () { f.reset(); btn.disabled = false; msg.textContent = "Thank you! Our team will contact you soon."; };
+    if (!SHEET_URL) {
+      var t = "New enquiry\nName: " + d.name + "\nPhone: " + d.phone + "\nAge: " + d.age + "\nNationality: " + d.nationality + "\nEmail: " + d.email + "\nCourse: " + d.course;
+      window.open("https://wa.me/971542474416?text=" + encodeURIComponent(t), "_blank"); done(); return;
+    }
+    fetch(SHEET_URL, { method: "POST", mode: "no-cors", body: new URLSearchParams(d) })
+      .then(done).catch(function () { btn.disabled = false; msg.textContent = "Could not send. Please WhatsApp us instead."; });
+  });
+})();
+</script>
+</body>
+</html>
