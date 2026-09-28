@@ -242,7 +242,7 @@ p{margin:0 0 14px}
 }
 
 /* AI Foundations */
-.ai-hero{display:grid;gap:32px;align-items:center;grid-template-columns:1.1fr .9fr}
+.ai-hero{display:block;max-width:760px}
 .ai-hero img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);display:block}
 .ai-tag{display:inline-block;background:var(--orange);color:#0D2444;font-weight:600;font-size:13px;padding:4px 12px;border-radius:999px;margin-bottom:10px}
 .ai-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
@@ -492,7 +492,6 @@ p{margin:0 0 14px}
           <div class="ai-stats"><div><b>8</b><span>weeks</span></div><div><b>14</b><span>sessions</span></div><div><b>42</b><span>hours</span></div><div><b>0</b><span>coding</span></div></div>
           <a class="btn btn-primary" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20the%20AI%20Foundations%20course." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Ask about AI Foundations</a>
         </div>
-        <img src="ai-foundations.jpg" alt="Glowing AI neural network illustration" loading="lazy" width="1024" height="1024">
       </div>
       <h3 class="ai-sub">14-session roadmap</h3>
       <div class="ai-sessions"><details><summary><b>01</b>Orientation</summary><p>How AI works, why it hallucinates, account setup, privacy and a four-way assistant comparison.</p></details><details><summary><b>02</b>Prompting mastery</summary><p>Prompt structures, roles, context and iteration techniques that get reliable results from any assistant.</p></details><details><summary><b>03</b>ChatGPT deep dive</summary><p>Custom instructions, GPTs, data analysis and advanced chat workflows for study and work.</p></details><details><summary><b>04</b>Claude deep dive</summary><p>Long documents, careful analysis, writing projects and Claude&#x27;s strengths versus other models.</p></details><details><summary><b>05</b>Gemini deep dive</summary><p>Google&#x27;s ecosystem, multimodal prompts, and Gemini inside Docs, Sheets and Gmail.</p></details><details><summary><b>06</b>Perplexity research</summary><p>Verified, cited research workflows, from quick answers to full referenced briefs.</p></details><details><summary><b>07</b>NotebookLM</summary><p>Turn your own sources into summaries, study guides and audio overviews you can trust.</p></details><details><summary><b>08</b>Canva Magic Studio</summary><p>AI-assisted design: branded posts, presentations and documents without a designer.</p></details><details><summary><b>09</b>AI image generation</summary><p>Midjourney and Firefly, from prompt craft to a coherent, portfolio-ready image set.</p></details><details><summary><b>10</b>AI video generation</summary><p>Sora, Runway and Pika: storyboarding, generating and editing short AI video.</p></details><details><summary><b>11</b>ElevenLabs and voice AI</summary><p>Realistic voiceovers, cloning ethics and adding narration to your projects.</p></details><details><summary><b>12</b>Grammarly and editing</summary><p>AI-assisted editing and polishing: tone, clarity and professional documents.</p></details><details><summary><b>13</b>Privacy, ethics and safety</summary><p>Data privacy, responsible use, and writing your personal AI use policy.</p></details><details><summary><b>14</b>Capstone and certification</summary><p>Timed practical exam, portfolio presentation and the Capsule Certificate award.</p></details></div>
@@ -656,21 +655,40 @@ p{margin:0 0 14px}
       </div>
 
       <div class="panel">
-        <h3>Send an enquiry on WhatsApp</h3>
-        <p>Tell us what you are looking for. Your message opens in WhatsApp, ready to send.</p>
-        <div class="field">
-          <label for="enq-name">Your name</label>
-          <input id="enq-name" type="text" autocomplete="name" placeholder="Full name">
-        </div>
-        <div class="field">
-          <label for="enq-level">I am interested in</label>
-          <select id="enq-level">
-            <option value="">A programme, not sure which yet</option>
-            <option value="Bachelor's degree">Bachelor’s degree</option>
-            <option value="Master's degree">Master’s degree</option>
-          </select>
-        </div>
-        <a id="enq-send" class="btn btn-primary" href="https://wa.me/971542474416" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Send on WhatsApp</a>
+        <h3>Send an enquiry</h3>
+        <p>Fill in your details and our admissions team will contact you.</p>
+        <form id="lead-form" novalidate>
+          <div class="field"><label for="lf-name">Full name *</label><input id="lf-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Full name"></div>
+          <div class="field"><label for="lf-phone">Phone / WhatsApp number *</label><input id="lf-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="+971 5X XXX XXXX"></div>
+          <div class="field"><label for="lf-age">Age *</label><input id="lf-age" name="age" type="number" min="15" max="80" required placeholder="Age"></div>
+          <div class="field"><label for="lf-email">Email *</label><input id="lf-email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="you@example.com"></div>
+          <div class="field"><label for="lf-course">Which course? *</label>
+            <select id="lf-course" name="course" required>
+              <option value="">Choose a course</option>
+              <optgroup label="Bachelor’s degree">
+                <option>BA – Bachelor of Arts, General</option>
+                <option>BBA – Bachelor of Business Administration, General</option>
+                <option>B.Com – Bachelor of Commerce</option>
+                <option>BCA – Bachelor of Computer Application</option>
+              </optgroup>
+              <optgroup label="Master’s degree">
+                <option>MSc – Master of Science</option>
+                <option>MA – Master of Arts</option>
+                <option>MSW – Master of Social Work</option>
+                <option>M.Com – Master of Commerce</option>
+                <option>MBA – Master of Business Administration</option>
+              </optgroup>
+              <optgroup label="AI Foundations course">
+                <option>AI Foundations – Package A (AED 499)</option>
+                <option>AI Foundations – Package B (AED 950)</option>
+                <option>AI Foundations – Package C (AED 1,260)</option>
+              </optgroup>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <p id="lf-msg" class="note" role="status" aria-live="polite"></p>
+          <button id="lf-submit" type="submit" class="btn btn-primary" style="margin-top:16px;border:0;cursor:pointer">Submit</button>
+        </form>
         <p class="note">Prefer a call? Use either number on this page.</p>
       </div>
     </div>
@@ -697,26 +715,28 @@ p{margin:0 0 14px}
 </div>
 
 <script>
+// Paste your Google Apps Script web app URL here to send leads to Google Sheets.
+var SHEET_URL = "";
 (function () {
-  var name = document.getElementById("enq-name");
-  var level = document.getElementById("enq-level");
-  var link = document.getElementById("enq-send");
-  var base = "https://wa.me/971542474416?text=";
-  function update() {
-    var n = name.value.trim();
-    var l = level.value;
-    var msg = "Hello Capsule Educational Institute, ";
-    if (n) { msg += "my name is " + n + ". "; }
-    if (l) {
-      msg += "I am interested in a " + l + ". Please share the programmes, eligibility and fee details.";
-    } else {
-      msg += "I would like details about your programmes and eligibility.";
+  var f = document.getElementById("lead-form"), msg = document.getElementById("lf-msg"), btn = document.getElementById("lf-submit");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = {
+      name: f.name.value.trim(), phone: f.phone.value.trim(), age: f.age.value.trim(),
+      email: f.email.value.trim(), course: f.course.value
+    };
+    if (!d.name || !d.course || !/^[+\d][\d\s-]{6,19}$/.test(d.phone) || !(+d.age >= 15 && +d.age <= 80) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
+      msg.textContent = "Please fill in all fields correctly."; return;
     }
-    link.href = base + encodeURIComponent(msg);
-  }
-  name.addEventListener("input", update);
-  level.addEventListener("change", update);
-  update();
+    btn.disabled = true; msg.textContent = "Sending…";
+    var done = function () { f.reset(); btn.disabled = false; msg.textContent = "Thank you! Our team will contact you soon."; };
+    if (!SHEET_URL) {
+      var t = "New enquiry\nName: " + d.name + "\nPhone: " + d.phone + "\nAge: " + d.age + "\nEmail: " + d.email + "\nCourse: " + d.course;
+      window.open("https://wa.me/971542474416?text=" + encodeURIComponent(t), "_blank"); done(); return;
+    }
+    fetch(SHEET_URL, { method: "POST", mode: "no-cors", body: new URLSearchParams(d) })
+      .then(done).catch(function () { btn.disabled = false; msg.textContent = "Could not send. Please WhatsApp us instead."; });
+  });
 })();
 </script>
 </body>
