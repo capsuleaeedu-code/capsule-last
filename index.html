@@ -661,6 +661,32 @@ p{margin:0 0 14px}
           <div class="field"><label for="lf-name">Full name *</label><input id="lf-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Full name"></div>
           <div class="field"><label for="lf-phone">Phone / WhatsApp number *</label><input id="lf-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="+971 5X XXX XXXX"></div>
           <div class="field"><label for="lf-age">Age *</label><input id="lf-age" name="age" type="number" min="15" max="80" required placeholder="Age"></div>
+          <div class="field"><label for="lf-nat">Nationality *</label>
+            <select id="lf-nat" name="nationality" required>
+              <option value="">Choose your nationality</option>
+              <option>Indian</option>
+              <option>Emirati</option>
+              <option>Pakistani</option>
+              <option>Bangladeshi</option>
+              <option>Nepali</option>
+              <option>Sri Lankan</option>
+              <option>Filipino</option>
+              <option>Egyptian</option>
+              <option>Jordanian</option>
+              <option>Lebanese</option>
+              <option>Syrian</option>
+              <option>Yemeni</option>
+              <option>Sudanese</option>
+              <option>Moroccan</option>
+              <option>Nigerian</option>
+              <option>Kenyan</option>
+              <option>South African</option>
+              <option>British</option>
+              <option>American</option>
+              <option value="Other">Other (please type)</option>
+            </select>
+          </div>
+          <div class="field" id="lf-nat-other-field" hidden><label for="lf-nat-other">Please type your nationality *</label><input id="lf-nat-other" name="nationality_other" type="text" maxlength="60" placeholder="Your nationality"></div>
           <div class="field"><label for="lf-email">Email *</label><input id="lf-email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="you@example.com"></div>
           <div class="field"><label for="lf-course">Which course? *</label>
             <select id="lf-course" name="course" required>
@@ -719,19 +745,27 @@ p{margin:0 0 14px}
 var SHEET_URL = "";
 (function () {
   var f = document.getElementById("lead-form"), msg = document.getElementById("lf-msg"), btn = document.getElementById("lf-submit");
+  var natSel = document.getElementById("lf-nat"), natField = document.getElementById("lf-nat-other-field");
+  natSel.addEventListener("change", function () {
+    natField.hidden = natSel.value !== "Other";
+    if (natField.hidden) document.getElementById("lf-nat-other").value = "";
+  });
   f.addEventListener("submit", function (e) {
     e.preventDefault();
+    var natSel = document.getElementById("lf-nat"),
+        natOther = document.getElementById("lf-nat-other");
+    var nat = natSel.value === "Other" ? natOther.value.trim() : natSel.value;
     var d = {
       name: f.name.value.trim(), phone: f.phone.value.trim(), age: f.age.value.trim(),
-      email: f.email.value.trim(), course: f.course.value
+      email: f.email.value.trim(), course: f.course.value, nationality: nat
     };
-    if (!d.name || !d.course || !/^[+\d][\d\s-]{6,19}$/.test(d.phone) || !(+d.age >= 15 && +d.age <= 80) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
+    if (!d.name || !d.course || !nat || !/^[+\d][\d\s-]{6,19}$/.test(d.phone) || !(+d.age >= 15 && +d.age <= 80) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
       msg.textContent = "Please fill in all fields correctly."; return;
     }
     btn.disabled = true; msg.textContent = "Sending…";
     var done = function () { f.reset(); btn.disabled = false; msg.textContent = "Thank you! Our team will contact you soon."; };
     if (!SHEET_URL) {
-      var t = "New enquiry\nName: " + d.name + "\nPhone: " + d.phone + "\nAge: " + d.age + "\nEmail: " + d.email + "\nCourse: " + d.course;
+      var t = "New enquiry\nName: " + d.name + "\nPhone: " + d.phone + "\nAge: " + d.age + "\nNationality: " + d.nationality + "\nEmail: " + d.email + "\nCourse: " + d.course;
       window.open("https://wa.me/971542474416?text=" + encodeURIComponent(t), "_blank"); done(); return;
     }
     fetch(SHEET_URL, { method: "POST", mode: "no-cors", body: new URLSearchParams(d) })
