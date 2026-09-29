@@ -264,7 +264,13 @@ p{margin:0 0 14px}
 .ai-pack .ai-price{font-size:30px;font-weight:700;color:var(--blue-text);margin:8px 0}
 .ai-pack ul{padding-left:18px;margin:12px 0 20px;font-size:15px;flex:1}
 .ai-pack .btn{justify-content:center}
-@media (max-width:860px){.ai-hero,.ai-packs,.ai-sessions{grid-template-columns:1fr}.ai-stats{grid-template-columns:repeat(2,1fr)}}
+.ai-faculty{display:grid;grid-template-columns:280px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;align-items:start}
+.ai-faculty img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+.ai-faculty h4{margin:0 0 4px;font-size:22px}
+.ai-faculty .ai-fac-role{color:var(--orange);font-weight:600;margin:0 0 12px}
+.ai-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ai-badges span{background:var(--blue-text);color:#fff;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px}
+@media (max-width:860px){.ai-hero,.ai-packs,.ai-sessions,.ai-faculty{grid-template-columns:1fr}.ai-stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -311,6 +317,18 @@ p{margin:0 0 14px}
           <p class="muted">An 8-week, no-code AI course in Abu Dhabi. Learn ChatGPT, Claude, Gemini, Perplexity, NotebookLM, Canva, Midjourney, Runway, ElevenLabs and more through live, hands-on sessions, and finish with a portfolio and the Capsule Certificate.</p>
           <div class="ai-stats"><div><b>8</b><span>weeks</span></div><div><b>14</b><span>sessions</span></div><div><b>42</b><span>hours</span></div><div><b>0</b><span>coding</span></div></div>
           <a class="btn btn-primary" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20the%20AI%20Foundations%20course." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Ask about AI Foundations</a>
+        </div>
+      </div>
+      <h3 class="ai-sub">Faculty profile</h3>
+      <div class="ai-faculty">
+        <img src="abhijeet.jpg" alt="M.A.S Abhijeet, AI Foundations faculty at Capsule Educational Institute" loading="lazy">
+        <div>
+          <h4>M.A.S Abhijeet</h4>
+          <p class="ai-fac-role">India's third-youngest CEO &middot; Founder, Our Crazy Code</p>
+          <p class="muted">A 15-year-old Indian tech entrepreneur, educator and changemaker based in Abu Dhabi. Abhijeet founded Our Crazy Code at 12 after struggling to find programming resources that made advanced technology approachable for children.</p>
+          <p class="muted">Our Crazy Code has trained more than 10,000 learners across 15 countries in AI, coding and entrepreneurship. His work also includes Jaini AI, a voice-based digital tutor; InnovateX Institute, which brings free technology education to underserved communities; and Bridge, an anonymous support community for young innovators.</p>
+          <p class="muted">In the AI Foundations course, he translates real-world experience with emerging tools into structured, beginner-friendly lessons. Learners see each workflow demonstrated, practise it in the lab and receive guidance as they build portfolio-ready work.</p>
+          <div class="ai-badges"><span>India's third-youngest CEO</span><span>Future Icon Award</span><span>Big Pitch Award</span><span>Young Genius Award</span></div>
         </div>
       </div>
       <h3 class="ai-sub">14-session roadmap</h3>
